@@ -26,6 +26,12 @@ public class BoardDrawing extends JPanel {
     //ArrayList<Portal> portals;
     //ArrayList<Player> players;
 
+        /**
+     * @param row de tipo entero
+     * @param col de tipo entero
+     * @param bs de tipo BoardScreen
+     * 
+     */
     public BoardDrawing(int row, int col, BoardScreen bs) {
         this.bs = bs;
 
@@ -64,7 +70,9 @@ public class BoardDrawing extends JPanel {
         }
 
     }
-
+     /**
+     * @param g tipo Graphics
+     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;//.create();
@@ -144,6 +152,9 @@ public class BoardDrawing extends JPanel {
 
     }
 
+    /**
+     * @param g2d tipo Graphics2D
+     */    
     private void DrawingSnakes(Graphics2D g2d) {
         //Drawing snakes and ladders
         for (Portal port : bs.portals) {
@@ -173,7 +184,14 @@ public class BoardDrawing extends JPanel {
 
         }
     }
-
+    /**
+     * @param g2d tipo Graphics2D
+     * @param pl tipo entero
+     * @param cell tipò Rectangle
+     * @param cellWidth tipo entero
+     * @param cellHeight tipo entero
+     */
+    
     private void DrawPlayer(Graphics2D g2d, int pl, Rectangle cell, int cellWidth, int cellHeight) {
         //only one player considered here
 
@@ -189,6 +207,10 @@ public class BoardDrawing extends JPanel {
 				player = port.returnEnd();
 		}
 	}
+     */
+    
+    /**
+     * @param pnos tipo entero
      */
     public String ensurePlayerPosition(int pnos) {
         String message = "";
@@ -209,6 +231,11 @@ public class BoardDrawing extends JPanel {
 	public void setPlayer(int a){
 		player = a;
 	}
+     */
+    
+    /**
+     * @param pnos tipo entero
+     * @param a tipo entero
      */
     public void setPlayer(int a, int pnos) {
         bs.players.get(pnos).incPosition(a);
